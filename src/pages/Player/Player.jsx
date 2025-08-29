@@ -11,7 +11,7 @@ let [movieData,setMovieData]=useState({});
 
 useEffect(()=>{
     let get_data=async ()=>{
-        let response=await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${name}%20trailer&type=video&maxResults=1&key=${key}`);
+        let response=await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${name}%20trailer&type=video&maxResults=1&key=${import.meta.env.VITE_YOUTUBE_API}`);
         let data=await response.json();
         console.log(data);
         setMovieData((prevMovieData)=>{
