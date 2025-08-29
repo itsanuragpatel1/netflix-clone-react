@@ -7,7 +7,6 @@ const Player = () => {
 let {name} =useParams();
 console.log(name);
 let [movieData,setMovieData]=useState({});
-let key="AIzaSyBKJqD5eh3qs8ZNqfBmnypq0cEodg4Z258";
 
 
 useEffect(()=>{
